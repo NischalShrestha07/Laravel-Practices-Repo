@@ -38,3 +38,7 @@ Route::get('/greeting', function () {
 Route::get('/user/{id}', function (string $id) {
     return 'User' . $id;
 });
+
+Route::get('/page/post', function () {
+    return view('post');
+})->name('mypost');
