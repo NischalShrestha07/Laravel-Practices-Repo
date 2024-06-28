@@ -1,5 +1,3 @@
-<h1>Our FIrst Page</h1>
-<a href="/post">Post Page</a>
-
-<a href="/about">About</a>
-<a href="{{route('post')}}">Post</a>
+<h1>Hello welcome to Laravel</h1>
+<a href="/post">Post</a>
+<a href="/firstpost">FirstPost</a>

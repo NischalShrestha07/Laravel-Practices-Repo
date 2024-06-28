@@ -15,7 +15,6 @@ Route::get('/post/{id?}/comment/{commentid?}', function (string $id = null, stri
     }
 })->where("id", '[0-9]+')->whereAlpha('commentid');
 
-
 Route::get('/about', function () {
     return view('about');
 });
@@ -24,9 +23,16 @@ Route::get('/post', function () {
 })->name('mypost');  //this will help to search even the path is changed above even /posttss
 
 
+Route::get('/firstpost', function () {
+    return view('firstpost');
+});
+
 
 
 // Route::view('/post', 'post');//the code above and this are same as they do the same work
 // Route::get('/post/firstpost', function () {
 //     return view('firstpost  ');
 // });
+Route::get('/greeting', function () {
+    return 'Hello World';
+});
