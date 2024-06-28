@@ -33,3 +33,9 @@ $user="Naruto";
 @{{$user}}
 {{-- use of @ infront of any variable will print the keys only --}}
 
+@php
+$fruits=["Apple","Mango","Banana"]
+@endphp
+@include('pages.header',['names'=>$fruits])
+<h1>Home Pages</h1>
+@include('pages.footer')
