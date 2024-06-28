@@ -27,12 +27,14 @@ Route::get('/firstpost', function () {
     return view('firstpost');
 });
 
-
-
 // Route::view('/post', 'post');//the code above and this are same as they do the same work
 // Route::get('/post/firstpost', function () {
 //     return view('firstpost  ');
 // });
 Route::get('/greeting', function () {
     return 'Hello World';
+});
+
+Route::get('/user/{id}', function (string $id) {
+    return 'User' . $id;
 });
