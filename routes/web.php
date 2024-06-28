@@ -57,6 +57,15 @@ Route::prefix('page')->group(function () {
         return view('nab', $data);
     });
 });
+Route::get('/fruits', function () {
+    $fruit['name'] = "Apple";
+    $fruit['color'] = "Red";
+    $fruit['shape'] = "Round";
+    $fruit['seeds'] = "One";
+    return view('fruits', $fruit);
+});
+
+
 Route::prefix('details')->group(function () {
     Route::get('/name', function () {
         return "<h1>Nischal</h1>";
