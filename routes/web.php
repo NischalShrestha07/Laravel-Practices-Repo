@@ -85,3 +85,10 @@ Route::prefix('details')->group(function () {
 Route::fallback(function () {
     return "<h1>PAGE NOT FOUND</h1>";
 });
+// returns given path like /user/nischal but in another one
+Route::get('/user/{name?}', function (?string $name = null) {
+    return $name;
+});
+Route::get('/user/{name?}', function (?string $name = 'John') {
+    return $name;
+});
