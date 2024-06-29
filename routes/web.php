@@ -92,3 +92,15 @@ Route::get('/user/{name?}', function (?string $name = null) {
 Route::get('/user/{name?}', function (?string $name = 'John') {
     return $name;
 });
+Route::get('/data/{name}', function (string $name) {
+    return $name;
+})->where('name', '[A-Za-z]+');
+
+Route::get('/user/{id}/{name}', function (string $id, string $name) {
+    return $name;
+})->whereNumber('id')->whereAlpha('name');
+
+
+Route::get('/category/{category}', function (string $category) {
+    return $category;
+})->whereIn('category', ['movie', 'song', 'singing', 'painting']);
