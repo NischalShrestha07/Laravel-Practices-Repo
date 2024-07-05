@@ -104,9 +104,9 @@ Route::get('/user/{id}/{name}', function (string $id, string $name) {
 
 Route::get('/category/{category}', function (string $category) {
     return $category;
-})->whereIn('category', ['movie', 'song', 'singing', 'painting']);
+})->whereIn('category', ['movie', 'dancing', 'song', 'singing', 'painting']);
 
-
+// 
 // declare globally in the AppServiceProvider.php  file.
 Route::get('/human/{id}', function (string $id) {
     return $id;
