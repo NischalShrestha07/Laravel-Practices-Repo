@@ -65,6 +65,7 @@ use Illuminate\Support\Facades\Route;
 //     $fruit['seeds'] = "One";
 //     return view('fruits', $fruit);
 // });
+//commit for github
 
 
 // Route::prefix('details')->group(function () {
