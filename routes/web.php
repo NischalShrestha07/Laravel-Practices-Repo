@@ -5,11 +5,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('layouts.home');
 });
 
 Route::get('/about', function () {
-    return view('home');
+    return view('layouts.about');
 });
 // Route::get('/{dumy}', function ($name = null) {
 //     $data = compact('name');

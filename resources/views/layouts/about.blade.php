@@ -1,6 +1,6 @@
-extends('layouts.main')
+@extends('layouts.main')
 @section('main-section')
-<h1 class="text-center">
+<h1>
     About page
 </h1>
 
