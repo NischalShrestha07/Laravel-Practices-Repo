@@ -3,9 +3,16 @@
 use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/home/{address}', function ($address) {
+        return $address;
+    });
+
 // Route::get('/post/{id?}/comment/{commentid?}', function (string $id = null, string $comment = null) {
 //     // Route::get('/post/{id}', function (string $id = null, string $comment = null) {
 //     // return view('post');
