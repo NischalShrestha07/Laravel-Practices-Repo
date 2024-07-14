@@ -5,13 +5,19 @@ use Illuminate\Support\Facades\Route;
 
 
 
+Route::get('/{dumy}', function ($name) {
+    $data = compact('name');
+
+    // print_r($data);=> compact is a method which converts the variable into array.
+    return view('home')->with($data);
+});
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/home/{address}', function ($address) {
-        return $address;
-    });
+// Route::get('/home/{address}', function ($address) {
+//         return $address;
+//     });
 
 // Route::get('/post/{id?}/comment/{commentid?}', function (string $id = null, string $comment = null) {
 //     // Route::get('/post/{id}', function (string $id = null, string $comment = null) {
