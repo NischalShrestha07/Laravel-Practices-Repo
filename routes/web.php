@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\SingleActionController;
 use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,11 @@ Route::get('/course', [SingleActionController::class, 'course']);
 //FOR RESOURCE CONTROLLER
 //difference is there will not be [] used in Controller
 Route::resource('photo', PhotoController::class);
+
+
+//FOR FORM REGISTRATION CONTROL 
+Route::get('/register', [RegistrationController::class, 'index']);
+Route::post('/register', [RegistrationController::class, 'register']);
 
 
 // --------------------------------------
