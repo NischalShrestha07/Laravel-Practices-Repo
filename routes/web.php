@@ -4,13 +4,19 @@ use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 
-
-Route::get('/{dumy}', function ($name = null) {
-    $data = compact('name');
-
-    //     // print_r($data);=> compact is a method which converts the variable into array.
-    return view('home')->with($data);
+Route::get('/', function () {
+    return view('home');
 });
+
+Route::get('/about', function () {
+    return view('home');
+});
+// Route::get('/{dumy}', function ($name = null) {
+//     $data = compact('name');
+
+//     //     // print_r($data);=> compact is a method which converts the variable into array.
+//     return view('home')->with($data);
+// });
 
 // Route::get('/', function () {
 //     return view('welcome');
