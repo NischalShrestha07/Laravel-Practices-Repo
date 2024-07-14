@@ -5,11 +5,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('layouts.home');
+    return view('managePage.home');
 });
 
 Route::get('/about', function () {
-    return view('layouts.about');
+    return view('managePage.about');
+});
+Route::get('/course', function () {
+    return view('managePage.courses');
 });
 // Route::get('/{dumy}', function ($name = null) {
 //     $data = compact('name');
