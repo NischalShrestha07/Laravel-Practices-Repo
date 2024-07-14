@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @push('title')
-<title>Hpme</title>
+<title>Course</title>
 
 @endpush
 @section('main-section')

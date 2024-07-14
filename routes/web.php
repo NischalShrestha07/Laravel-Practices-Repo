@@ -1,19 +1,36 @@
 <?php
 
+use App\Http\Controllers\DemoController;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\SingleActionController;
 use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('managePage.home');
-});
+Route::get('/', [DemoController::class, 'index']);
+Route::get('/about', [DemoController::class, 'about']);
+Route::get('/course', [SingleActionController::class, 'course']);
 
-Route::get('/about', function () {
-    return view('managePage.about');
-});
-Route::get('/course', function () {
-    return view('managePage.courses');
-});
+
+
+//FOR RESOURCE CONTROLLER
+//difference is there will not be [] used in Controller
+Route::resource('photo', PhotoController::class);
+
+
+// --------------------------------------
+// Route::get('/', function () {
+//     return view('managePage.home');
+// });
+
+// Route::get('/about', function () {
+//     return view('managePage.about');
+// });
+// Route::get('/course', function () {
+//     return view('managePage.courses');
+// });
+// --------------------------------------
+
 // Route::get('/{dumy}', function ($name = null) {
 //     $data = compact('name');
 
